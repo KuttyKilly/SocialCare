@@ -1,0 +1,211 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Social Care Budget App</title>
+
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+        <script src="js.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/> 
+
+        <style type="text/css">
+                #list{
+                        text-align: center;
+                        /*width: 70%;*/
+                        margin-top: 5%;
+                }
+        </style>
+    </head>
+    <body>
+        <!--OLD FORM + OLD JS Works. OLD FORM + 2ND LATEST JS WORKS. LATEST FORM LATEST JS NO USE. BY WORKS I MEAN JUST {LoggedIn = true}-->
+        <div data-role="page" id="loginForm" data-theme="e">
+            <!--Start of Log In Page-->
+            <header data-role="header">
+                 <h1>Log In</h1> 
+            </header>
+
+            <!--OLD FORM-->
+            <form id="form1" name="form1" method="GET" action="http://softwarehuttest.x10.mx/public/account/login/">
+                <label for="id">Username   </label>
+                <input type="text" name="id" id="id" />
+
+                <label for="password">Password   </label>
+                <input type="password" name="password" id="password" />
+
+                <input type="submit" name="submit" value="Login"/>    
+            </form>
+            
+            <footer data-role="footer" data-position="fixed">
+                <h1></h1>
+            </footer>
+        </div>
+        <!--End of Log In Page-->
+
+        <div data-role="page" id="home" data-theme="e"><!--Start of Home Page-->
+            <header data-role="header">
+                    <h1>Budget Planner</h1>
+            </header>
+            <article data-role="content">
+                <ul data-role="listview" >
+                    <li>
+                        <a href="#benefits" data-transition="slidefade">
+                            <h1>Benefits</h1>
+                            <img src="img/orange-icon.png" alt="benefits">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#bills" data-transition="slidefade">
+                            <h1>Bills</h1>
+                            <img src="img/green-icon.png" alt="bills">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#expense" data-transition="slidefade">
+                            <h1>Expenditure</h1>
+                            <img src="img/blue-icon.png" alt="expenditure">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#budgetPopup" data-rel="popup" class="ui-content">
+                            <h1>Budget</h1>
+                            <img src="img/red-icon.png" alt="budget">
+                        </a>
+                <!--Pop up details for total budget-->
+                        <div data-role="popup" id="budgetPopup" class="ui-content" data-transition="slide">	              
+                          <p>Total remaining budget</p>
+                          <p><b>$100.00</b></p>
+                        </div>
+                    </li>
+                </ul>
+            </article>
+            <footer data-role="footer" data-position="fixed">
+                    <h1></h1>
+            </footer>
+        </div><!--End of Home page-->
+
+        <div data-role="page" id="benefits" data-theme="e"><!--Start of Benefits Page-->
+            <header data-role="header">
+            <h1>Benefits</h1>		
+        </header>
+
+        <article data-role="content">
+            <div data-role="collapsible-set">
+                <div data-role="collapsible" id="benefitsList">
+                    <h1>Benefit A</h1>
+                    <p>Next Payout</p>
+                    <p>Date: 01/05/2014</p>
+                    <p>Amount: $100.00</p>
+                    <p>Frequency: Daily</p>
+                </div>
+
+                <div data-role="collapsible">
+                    <h1>Benefit B</h1>
+                    <p>Next Payout</p>
+                    <p>Date: 02/05/2014</p>
+                    <p>Amount: $200.00</p>
+                    <p>Frequency: Weekly</p>
+                </div>			
+
+                <div data-role="collapsible">
+                    <h1>Benefit C</h1>
+                    <p>Next Payout</p>
+                    <p>Date: 03/05/2014</p>
+                    <p>Amount: $300.00</p>
+                    <p>Frequency: Forthnightly</p>
+                </div>	
+
+                <div data-role="collapsible">
+                    <h1>Benefit D</h1>
+                    <p>Next Payout</p>
+                    <p>Date: 04/05/2014</p>
+                    <p>Amount: $400.00</p>
+                    <p>Frequency: Monthly</p>
+                </div>		
+            </div>
+        </article>
+        <footer data-role="footer" data-position="fixed">
+            <h1></h1>
+        </footer>
+        </div><!--End of benefits page-->
+
+        <div data-role="page" id="bills" data-theme="e"><!--Start of Bills Page-->
+            <header data-role="header">
+            <h1>Bills</h1>		
+        </header>
+        <article data-role="content">
+            <div data-role="collapsible-set">
+                <div data-role="collapsible">
+                    <h1>Gas</h1>
+                    <p>Details</p>
+                    <p>Due Date: 01/05/2014</p>
+                    <p>Amount: $10.00</p>
+                    <p>Frequency: Daily</p>
+                </div>
+
+                <div data-role="collapsible">
+                    <h1>Rent</h1>
+                    <p>Details</p>
+                    <p>Date: 02/05/2014</p>
+                    <p>Amount: $20.00</p>
+                    <p>Frequency: Weekly</p>
+                </div>			
+
+                <div data-role="collapsible">
+                    <h1>Mobile Top-up</h1>
+                    <p>Details</p>
+                    <p>Date: 03/05/2014</p>
+                    <p>Amount: $30.00</p>
+                    <p>Frequency: Forthnightly</p>
+                </div>	
+
+                <div data-role="collapsible">
+                    <h1>Electricity</h1>
+                    <p>Details</p>
+                    <p>Date: 04/05/2014</p>
+                    <p>Amount: $40.00</p>
+                    <p>Frequency: Monthly</p>
+                </div>		
+
+                <div data-role="collapsible">
+                    <h1>Water</h1>
+                    <p>Details</p>
+                    <p>Date: 04/05/2014</p>
+                    <p>Amount: $50.00</p>
+                    <p>Frequency: Yearly</p>
+                </div>			
+            </div>
+        </article>
+        <footer data-role="footer" data-position="fixed">
+                <h1></h1>
+        </footer>
+        </div><!--End of bills page-->
+
+        <div data-role="page" id="expense" data-theme="e"><!--Start of Expenditure page--> 
+            <header data-role="header">
+                <h1>Expenditure</h1>		
+            </header>
+
+                <div>
+                    <form id="list_form">  
+
+                        <div class="text_field">
+                            <input type="text" size="55" id="list_description"/>
+                        </div>
+
+                        <div class="button_right" id="button-right">
+                            <input type="submit" id="add_list" value="Add"/>
+                        </div>
+
+                    </form>
+                </div>
+
+                <div class="expense_list" id="list"></div>	
+
+                <footer data-role="footer" data-position="fixed">
+                    <h1></h1>
+                </footer>
+        </div><!--End of Expenditure Page-->
+
+    </body>
+</html>
