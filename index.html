@@ -11,9 +11,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/> 
     </head>
     <body>
-        <!--OLD FORM + OLD JS Works. OLD FORM + 2ND LATEST JS WORKS. LATEST FORM LATEST JS NO USE. BY WORKS I MEAN JUST {LoggedIn = true}-->
-        <div data-role="page" id="loginForm" data-theme="e">
-            <!--Start of Log In Page-->
+
+        <!--Start of Log In Page-->
+        <div data-role="page" id="loginForm" data-theme="e">         
             <header data-role="header">
                  <h1>Log In</h1> 
             </header>
@@ -37,7 +37,8 @@
         </div>
         <!--End of Log In Page-->
 
-        <div data-role="page" id="home" data-theme="e"><!--Start of Home Page-->
+        <!--Start of Home Page-->
+        <div data-role="page" id="home" data-theme="e">
             <header data-role="header">
                     <h1>Budget Planner</h1>
             </header>
@@ -67,7 +68,7 @@
                             <img src="img/red-icon.png" alt="budget">
                         </a>
                 <!--Pop up details for total budget-->
-                        <div data-role="popup" id="budgetPopup" class="ui-content" data-transition="slide">	              
+                        <div data-role="popup" id="budgetPopup" class="ui-content" data-transition="slide">               
                           <p>Total remaining budget</p>
                           <p><b>$100.00</b></p>
                         </div>
@@ -77,11 +78,13 @@
             <footer data-role="footer" data-position="fixed">
                     <h1></h1>
             </footer>
-        </div><!--End of Home page-->
+        </div>
+        <!--End of Home page-->
 
-        <div data-role="page" id="benefits" data-theme="e"><!--Start of Benefits Page-->
+        <!--Start of Benefits Page-->
+        <div data-role="page" id="benefits" data-theme="e">
             <header data-role="header">
-            <h1>Benefits</h1>		
+            <h1>Benefits</h1>   
         </header>
 
         <article data-role="content">
@@ -100,7 +103,7 @@
                     <p>Date: 02/05/2014</p>
                     <p>Amount: $200.00</p>
                     <p>Frequency: Weekly</p>
-                </div>			
+                </div>      
 
                 <div data-role="collapsible">
                     <h1>Benefit C</h1>
@@ -108,7 +111,7 @@
                     <p>Date: 03/05/2014</p>
                     <p>Amount: $300.00</p>
                     <p>Frequency: Forthnightly</p>
-                </div>	
+                </div>  
 
                 <div data-role="collapsible">
                     <h1>Benefit D</h1>
@@ -116,17 +119,19 @@
                     <p>Date: 04/05/2014</p>
                     <p>Amount: $400.00</p>
                     <p>Frequency: Monthly</p>
-                </div>		
+                </div>    
             </div>
         </article>
         <footer data-role="footer" data-position="fixed">
             <h1></h1>
         </footer>
-        </div><!--End of benefits page-->
+        </div>
+        <!--End of benefits page-->
 
-        <div data-role="page" id="bills" data-theme="e"><!--Start of Bills Page-->
+        <!--Start of Bills Page-->
+        <div data-role="page" id="bills" data-theme="e">
             <header data-role="header">
-            <h1>Bills</h1>		
+            <h1>Bills</h1>    
         </header>
         <article data-role="content">
             <div data-role="collapsible-set">
@@ -144,7 +149,7 @@
                     <p>Date: 02/05/2014</p>
                     <p>Amount: $20.00</p>
                     <p>Frequency: Weekly</p>
-                </div>			
+                </div>      
 
                 <div data-role="collapsible">
                     <h1>Mobile Top-up</h1>
@@ -152,7 +157,7 @@
                     <p>Date: 03/05/2014</p>
                     <p>Amount: $30.00</p>
                     <p>Frequency: Forthnightly</p>
-                </div>	
+                </div>  
 
                 <div data-role="collapsible">
                     <h1>Electricity</h1>
@@ -160,7 +165,7 @@
                     <p>Date: 04/05/2014</p>
                     <p>Amount: $40.00</p>
                     <p>Frequency: Monthly</p>
-                </div>		
+                </div>    
 
                 <div data-role="collapsible">
                     <h1>Water</h1>
@@ -168,21 +173,31 @@
                     <p>Date: 04/05/2014</p>
                     <p>Amount: $50.00</p>
                     <p>Frequency: Yearly</p>
-                </div>			
+                </div>      
             </div>
         </article>
         <footer data-role="footer" data-position="fixed">
                 <h1></h1>
         </footer>
-        </div><!--End of bills page-->
+        </div>
+        <!--End of bills page-->
 
-        <div data-role="page" id="expense" data-theme="e"><!--Start of Expenditure page--> 
+        <!--Start of Expenditure page-->
+        <div data-role="page" id="expense" data-theme="e"> 
             <header data-role="header">
-                <h1>Expenditure</h1>		
+                <h1>Expenditure</h1>    
             </header>
 
                 <div>
                     <form id="list_form">  
+
+                        <fieldset>
+                            <select name="payment" id="payment" data-native-menu="false">
+                              <option>Payment Method</option>
+                              <option value="Cash">Cash</option>
+                              <option value="Bank">Bank</option>
+                            </select>
+                        </fieldset>
 
                         <div class="text_field">
                             <input type="text" size="55" id="list_description"/>
@@ -195,12 +210,13 @@
                     </form>
                 </div>
 
-                <div class="expense_list" id="list"></div>	
+                <div class="expense_list" id="list"></div>  
 
                 <footer data-role="footer" data-position="fixed">
                     <h1></h1>
                 </footer>
-        </div><!--End of Expenditure Page-->
+        </div>
+        <!--End of Expenditure Page-->
 
     </body>
 </html>

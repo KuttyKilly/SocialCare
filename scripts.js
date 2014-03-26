@@ -22,8 +22,10 @@ $(document).ready( function() {
 
     $('#add_list').click( function() {
         var listDescription = $('#list_description').val();
+        var payment = $('#payment').val();
+        
+        $('.expense_list').prepend('<div>' + "\u00A3 "  + listDescription + "\t\t\t" + payment + "\t" + '</div>');
 
-        $('.expense_list').prepend('<div>' + listDescription + '</div>'); 
         
         /*        
         $.ajax({
