@@ -11,7 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/> 
     </head>
     <body>
-        <!--OLD FORM + OLD JS Works. OLD FORM + 2ND LATEST JS WORKS. LATEST FORM LATEST JS NO USE. BY WORKS I MEAN JUST {LoggedIn = true}-->
+        <!--LOG IN PAGE START-->
         <div data-role="page" id="loginForm" data-theme="e">
             <!--Start of Log In Page-->
             <header data-role="header">
@@ -36,8 +36,9 @@
             </footer>
         </div>
         <!--End of Log In Page-->
-
-        <div data-role="page" id="home" data-theme="e"><!--Start of Home Page-->
+        
+        <!--Start of Home Page-->
+        <div data-role="page" id="home" data-theme="e">
             <header data-role="header">
                     <h1>Budget Planner</h1>
             </header>
@@ -66,7 +67,7 @@
                             <h1>Budget</h1>
                             <img src="img/red-icon.png" alt="budget">
                         </a>
-                <!--Pop up details for total budget-->
+                        <!--Pop up details for total budget-->
                         <div data-role="popup" id="budgetPopup" class="ui-content" data-transition="slide">	              
                           <p>Total remaining budget</p>
                           <p><b>$100.00</b></p>
@@ -77,9 +78,11 @@
             <footer data-role="footer" data-position="fixed">
                     <h1></h1>
             </footer>
-        </div><!--End of Home page-->
-
-        <div data-role="page" id="benefits" data-theme="e"><!--Start of Benefits Page-->
+        </div>
+        <!--End of Home page-->
+        
+        <!--Start of Benefits Page-->
+        <div data-role="page" id="benefits" data-theme="e">
             <header data-role="header">
             <h1>Benefits</h1>		
         </header>
@@ -122,9 +125,11 @@
         <footer data-role="footer" data-position="fixed">
             <h1></h1>
         </footer>
-        </div><!--End of benefits page-->
-
-        <div data-role="page" id="bills" data-theme="e"><!--Start of Bills Page-->
+        </div>
+        <!--End of benefits page-->
+        
+        <!--Start of Bills Page-->
+        <div data-role="page" id="bills" data-theme="e">
             <header data-role="header">
             <h1>Bills</h1>		
         </header>
@@ -174,23 +179,33 @@
         <footer data-role="footer" data-position="fixed">
                 <h1></h1>
         </footer>
-        </div><!--End of bills page-->
-
-        <div data-role="page" id="expense" data-theme="e"><!--Start of Expenditure page--> 
+        </div>
+        <!--End of bills page-->
+        
+        <!--Start of Expenditure page--> 
+        <div data-role="page" id="expense" data-theme="e">
             <header data-role="header">
                 <h1>Expenditure</h1>		
             </header>
 
                 <div>
                     <form id="list_form">  
-
+                        
+                        <fieldset>
+                            <select name="payment" id="payment" data-native-menu="false">
+                              <option>Payment Method</option>
+                              <option value="Cash">Cash</option>
+                              <option value="Bank">Bank</option>
+                            </select>
+                         </fieldset>
+                                                
                         <div class="text_field">
                             <input type="text" size="55" id="list_description"/>
                         </div>
 
                         <div class="button_right" id="button-right">
                             <input type="submit" id="add_list" value="Add"/>
-                        </div>
+                        </div>                     
 
                     </form>
                 </div>
@@ -200,7 +215,8 @@
                 <footer data-role="footer" data-position="fixed">
                     <h1></h1>
                 </footer>
-        </div><!--End of Expenditure Page-->
+        </div>
+        <!--End of Expenditure Page-->
 
     </body>
 </html>

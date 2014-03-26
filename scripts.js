@@ -24,6 +24,24 @@ $(document).ready( function() {
         var listDescription = $('#list_description').val();
 
         $('.expense_list').prepend('<div>' + listDescription + '</div>'); 
+        
+        /*        
+        $.ajax({
+        type:"Post",
+        url:"http://softwarehuttest.x10.mx/public/user/spent/?amount="+listDescription+"&account="+payment,
+        async:true,
+        cache:false,
+        success:function(data) {
+        if (data.loggedIn) {
+                    $.mobile.changePage("#expense");
+                } else {
+                    alert("Invalie Entry");
+                }
+        } 
+
+        });
+        */
+        
         $('#list_form')[0].reset();
         return false;                           
     });     
