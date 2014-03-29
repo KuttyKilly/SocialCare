@@ -35,7 +35,7 @@ $(document).ready( function() {
 
         //sending the expense list information to the server each time it is added.
         $.ajax({
-            url: "http://softwarehuttest.x10.mx/public/user/spenter",
+            url: "http://softwarehuttest.x10.mx/public/user/spent",
             data: {
                 amount: listDescription,
                 account: payment
@@ -88,9 +88,9 @@ $(document).ready( function() {
 
         ////
 
-        $.getJSON("http://softwarehuttest.x10.mx/public/user/spenter", {
-            amount: listDescription,
-            account: payment
+        $.getJSON("http://softwarehuttest.x10.mx/public/user/income", {
+            amount: listDescription1,
+            account: payment1
         }, function(data) {
             alert("success");
         }).fail(function() {
