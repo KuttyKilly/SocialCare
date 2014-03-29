@@ -121,7 +121,7 @@ $(document).on("pagecreate",function(){
   
   
 //UPDATING BENEFITS PAGE WITH INFO FROM DATABASE
-$.getJSON("http://softwarehuttest.x10.mx/public/user/listincome/", function (data) {
+$.getJSON("http://www.mocky.io/v2/5336fb3e695d396009574483", function (data) {
     //Loop for each element on the data
     $.each(data, function (elem) {
         var wrap = $("<div/>").attr('data-role', 'collapsible');
