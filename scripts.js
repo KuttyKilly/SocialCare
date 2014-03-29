@@ -19,7 +19,7 @@ $(document).on("pageinit", "#loginForm", function () {
     });
 });
 
-$(document).ready( function() {     
+//$(document).ready( function() {     
     var listDescription;
     var listDescription1;
     var payment;
@@ -102,7 +102,7 @@ $(document).ready( function() {
         $('#list_form1')[0].reset();
         return false;                           
     });     
-}); 
+//}); 
 
 //refreshed everytime page created (mainly for benefits/ bills page) //CURRENTLY NOT USING
 $(document).on("pagecreate",function(){
