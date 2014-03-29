@@ -35,7 +35,7 @@ $(document).ready( function() {
 
         //sending the expense list information to the server each time it is added.
         $.ajax({
-            url: "htttp://mywebsite.com/public/user/spent/",
+            url: "http://softwarehuttest.x10.mx/public/user/spent",
             data: {
                 amount: listDescription,
                 account: payment
@@ -55,7 +55,7 @@ $(document).ready( function() {
         return false;                           
     });     
 
-    //earnings page
+    //earnings page ACCESS SET METHOD
     $('#add_list1').click( function() {
 
         //appending information to the list in earnings page
@@ -66,7 +66,7 @@ $(document).ready( function() {
         
         //sending the earnings list information to the server each time it is added.
         $.ajax({
-            url: "htttp://mywebsite.com/public/user/spent/",
+            url: "http://softwarehuttest.x10.mx/public/user/spent",
             data: {
                 amount: listDescription1,
                 account: payment1
@@ -75,10 +75,10 @@ $(document).ready( function() {
             async:true,
             cache:false,
             success: function (data) {
-                alert("success");
+                alert("success"); //just a debugging line. should be removed.
             },
             error: function (xhr, status, error) {
-                alert("error"); 
+                alert(error); //just a debugging line. should be removed. 
             }
         });
 
@@ -93,8 +93,9 @@ $(document).on("pagecreate",function(){
     
 
   
-  //UPDATING THE BILLS PAGE WITH INFO FROM DATABASE   
-  $.getJSON("http://www.mocky.io/v2/533604e8f5aa39b117bc2d26",function(data){
+  //UPDATING THE BILLS PAGE WITH INFO FROM DATABASE // ACCESSING GET METHOD   
+  //http://www.mocky.io/v2/533604e8f5aa39b117bc2d26 //TESTING URL THAT WORKS
+  $.getJSON("http://softwarehuttest.x10.mx/public/user/listbills/",function(data){
         //Loop for each element on the data
         $.each(data,function(elem){
             var wrap = $("<div/>").attr('data-role', 'collapsible');
@@ -121,7 +122,8 @@ $(document).on("pagecreate",function(){
   
   
 //UPDATING BENEFITS PAGE WITH INFO FROM DATABASE
-$.getJSON("http://www.mocky.io/v2/5336fb3e695d396009574483", function (data) {
+//http://www.mocky.io/v2/5336fb3e695d396009574483 //TESTING URL THAT WORKS
+$.getJSON("http://softwarehuttest.x10.mx/public/user/listincome/", function (data) {
     //Loop for each element on the data
     $.each(data, function (elem) {
         var wrap = $("<div/>").attr('data-role', 'collapsible');
