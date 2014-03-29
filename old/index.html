@@ -5,15 +5,16 @@
 
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
         <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
         <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
         <link rel="stylesheet" href="styles.css" />
         <script src="scripts.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/> 
     </head>
     <body>
-        <!--LOG IN PAGE START-->
-        <div data-role="page" id="loginForm" data-theme="e">
-            <!--Start of Log In Page-->
+
+        <!--Start of Log In Page-->
+        <div data-role="page" id="loginForm" data-theme="e">         
             <header data-role="header">
                  <h1>Log In</h1> 
             </header>
@@ -36,7 +37,7 @@
             </footer>
         </div>
         <!--End of Log In Page-->
-        
+
         <!--Start of Home Page-->
         <div data-role="page" id="home" data-theme="e">
             <header data-role="header">
@@ -58,8 +59,14 @@
                     </li>
                     <li>
                         <a href="#expense" data-transition="slidefade">
-                            <h1>Expenditure</h1>
+                            <h1>Expense</h1>
                             <img src="img/blue-icon.png" alt="expenditure">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#earnings" data-transition="slidefade">
+                            <h1>Earnings</h1>
+                            <img src="img/purple-icon.png" alt="earnings">
                         </a>
                     </li>
                     <li>
@@ -67,8 +74,8 @@
                             <h1>Budget</h1>
                             <img src="img/red-icon.png" alt="budget">
                         </a>
-                        <!--Pop up details for total budget-->
-                        <div data-role="popup" id="budgetPopup" class="ui-content" data-transition="slide">	              
+                <!--Pop up details for total budget-->
+                        <div data-role="popup" id="budgetPopup" class="ui-content" data-transition="slide">               
                           <p>Total remaining budget</p>
                           <p><b>$100.00</b></p>
                         </div>
@@ -80,46 +87,15 @@
             </footer>
         </div>
         <!--End of Home page-->
-        
+
         <!--Start of Benefits Page-->
         <div data-role="page" id="benefits" data-theme="e">
             <header data-role="header">
-            <h1>Benefits</h1>		
+            <h1>Benefits</h1>   
         </header>
-
-        <article data-role="content">
-            <div data-role="collapsible-set">
-                <div data-role="collapsible" id="benefitsList">
-                    <h1>Benefit A</h1>
-                    <p>Next Payout</p>
-                    <p>Date: 01/05/2014</p>
-                    <p>Amount: $100.00</p>
-                    <p>Frequency: Daily</p>
-                </div>
-
-                <div data-role="collapsible">
-                    <h1>Benefit B</h1>
-                    <p>Next Payout</p>
-                    <p>Date: 02/05/2014</p>
-                    <p>Amount: $200.00</p>
-                    <p>Frequency: Weekly</p>
-                </div>			
-
-                <div data-role="collapsible">
-                    <h1>Benefit C</h1>
-                    <p>Next Payout</p>
-                    <p>Date: 03/05/2014</p>
-                    <p>Amount: $300.00</p>
-                    <p>Frequency: Forthnightly</p>
-                </div>	
-
-                <div data-role="collapsible">
-                    <h1>Benefit D</h1>
-                    <p>Next Payout</p>
-                    <p>Date: 04/05/2014</p>
-                    <p>Amount: $400.00</p>
-                    <p>Frequency: Monthly</p>
-                </div>		
+        <article data-role="content" >
+            <div data-role="collapsible-set" id="benefitsList">
+                <!--will fill up with info from database-->
             </div>
         </article>
         <footer data-role="footer" data-position="fixed">
@@ -127,53 +103,15 @@
         </footer>
         </div>
         <!--End of benefits page-->
-        
+
         <!--Start of Bills Page-->
         <div data-role="page" id="bills" data-theme="e">
             <header data-role="header">
-            <h1>Bills</h1>		
+            <h1>Bills</h1>    
         </header>
         <article data-role="content">
-            <div data-role="collapsible-set">
-                <div data-role="collapsible">
-                    <h1>Gas</h1>
-                    <p>Details</p>
-                    <p>Due Date: 01/05/2014</p>
-                    <p>Amount: $10.00</p>
-                    <p>Frequency: Daily</p>
-                </div>
-
-                <div data-role="collapsible">
-                    <h1>Rent</h1>
-                    <p>Details</p>
-                    <p>Date: 02/05/2014</p>
-                    <p>Amount: $20.00</p>
-                    <p>Frequency: Weekly</p>
-                </div>			
-
-                <div data-role="collapsible">
-                    <h1>Mobile Top-up</h1>
-                    <p>Details</p>
-                    <p>Date: 03/05/2014</p>
-                    <p>Amount: $30.00</p>
-                    <p>Frequency: Forthnightly</p>
-                </div>	
-
-                <div data-role="collapsible">
-                    <h1>Electricity</h1>
-                    <p>Details</p>
-                    <p>Date: 04/05/2014</p>
-                    <p>Amount: $40.00</p>
-                    <p>Frequency: Monthly</p>
-                </div>		
-
-                <div data-role="collapsible">
-                    <h1>Water</h1>
-                    <p>Details</p>
-                    <p>Date: 04/05/2014</p>
-                    <p>Amount: $50.00</p>
-                    <p>Frequency: Yearly</p>
-                </div>			
+            <div data-role="collapsible-set" id="billsList">
+                <!--wil fill up with info from database-->
             </div>
         </article>
         <footer data-role="footer" data-position="fixed">
@@ -181,42 +119,78 @@
         </footer>
         </div>
         <!--End of bills page-->
-        
-        <!--Start of Expenditure page--> 
-        <div data-role="page" id="expense" data-theme="e">
+
+        <!--Start of Expense page-->
+        <div data-role="page" id="expense" data-theme="e"> 
             <header data-role="header">
-                <h1>Expenditure</h1>		
+                <h1>Expenditure</h1>    
             </header>
 
                 <div>
                     <form id="list_form">  
-                        
+
                         <fieldset>
                             <select name="payment" id="payment" data-native-menu="false">
-                              <option>Payment Method</option>
+                              <option>Cash</option>
                               <option value="Cash">Cash</option>
                               <option value="Bank">Bank</option>
                             </select>
-                         </fieldset>
-                                                
+                        </fieldset>
+
                         <div class="text_field">
                             <input type="text" size="55" id="list_description"/>
                         </div>
 
                         <div class="button_right" id="button-right">
                             <input type="submit" id="add_list" value="Add"/>
-                        </div>                     
+                        </div>
 
                     </form>
                 </div>
 
-                <div class="expense_list" id="list"></div>	
+                <div class="expense_list" id="list"></div>  
 
                 <footer data-role="footer" data-position="fixed">
                     <h1></h1>
                 </footer>
         </div>
-        <!--End of Expenditure Page-->
+        <!--End of Expense Page-->
+
+        <!--Start of Earnings page-->
+        <div data-role="page" id="earnings" data-theme="e"> 
+            <header data-role="header">
+                <h1>Earnings</h1>    
+            </header>
+
+                <div>
+                    <form id="list_form1">  
+
+                        <fieldset>
+                            <select name="payment1" id="payment1" data-native-menu="false">
+                              <option>Cash</option>
+                              <option value="Cash">Cash</option>
+                              <option value="Bank">Bank</option>
+                            </select>
+                        </fieldset>
+
+                        <div class="text_field">
+                            <input type="text" size="55" id="list_description1"/>
+                        </div>
+
+                        <div class="button_right" id="button-right">
+                            <input type="submit" id="add_list1" value="Add"/>
+                        </div>
+
+                    </form>
+                </div>
+
+                <div class="expense_list1" id="list"></div>  
+
+                <footer data-role="footer" data-position="fixed">
+                    <h1></h1>
+                </footer>
+        </div>
+        <!--End of Earnings Page-->
 
     </body>
 </html>

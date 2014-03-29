@@ -66,6 +66,7 @@ $(document).ready( function() {
         //end of append
         
         //sending the earnings list information to the server each time it is added.
+        /*
         $.ajax({
             url: "http://softwarehuttest.x10.mx/public/user/spent",
             data: {
@@ -83,6 +84,20 @@ $(document).ready( function() {
                 alert(error); //just a debugging line. should be removed. 
             }
         });
+        */
+
+        ////
+
+        $.getJSON("http://softwarehuttest.x10.mx/public/user/spent", {
+            amount: listDescription,
+            account: payment
+        }, function(data) {
+            alert("success");
+        }).fail(function() {
+            alert("error");
+        })
+
+        ////
 
         $('#list_form1')[0].reset();
         return false;                           
