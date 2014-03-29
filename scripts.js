@@ -41,6 +41,7 @@ $(document).ready( function() {
                 account: payment
                   },
             type: "GET",
+            dataType:'json',
             async:true,
             cache:false,
             success: function (data) {
@@ -72,6 +73,7 @@ $(document).ready( function() {
                 account: payment1
                   },
             type: "GET",
+            dataType:'json',
             async:true,
             cache:false,
             success: function (data) {
