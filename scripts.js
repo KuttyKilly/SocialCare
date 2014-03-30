@@ -24,10 +24,10 @@ $(document).ready( function() {
     var listDescription1;
     var payment;
     var payment1;
-    //expense page
-    $('#add_list').click( function() {
 
-        //appending information to the list in expense page
+    //expense page ACCESS SET METHOD
+    $('#add_list').click( function() {
+       
         listDescription = $('#list_description').val();
         payment = $('#payment').val();      
         $('.expense_list').prepend('<div>' + "\u00A3 "  + listDescription + "\t\t\t" + payment + "\t" + '</div>');
@@ -48,7 +48,7 @@ $(document).ready( function() {
                 alert(data);
             },
             error: function (xhr, status, error) {
-                alert("error"); 
+                alert(error);  
             }
         });
  
@@ -92,7 +92,7 @@ $(document).ready( function() {
             amount: listDescription1,
             account: payment1
         }, function(data) {
-            alert("success");
+            alert("success " + data);
         }).fail(function() {
             alert("error");
         })
@@ -103,15 +103,14 @@ $(document).ready( function() {
         return false;                           
     });     
 }); 
+//END OF SET METHOD ACCESS
 
 //refreshed everytime page created (mainly for benefits/ bills page) //CURRENTLY NOT USING
 $(document).on("pagecreate",function(){
     });//end of page create
     
-
-  
   //UPDATING THE BILLS PAGE WITH INFO FROM DATABASE // ACCESSING GET METHOD   
-  //http://www.mocky.io/v2/533604e8f5aa39b117bc2d26 //TESTING URL THAT WORKS
+  //WORKS FINE
   $.getJSON("http://softwarehuttest.x10.mx/public/user/listbills/",function(data){
         //Loop for each element on the data
         $.each(data,function(elem){
@@ -139,7 +138,7 @@ $(document).on("pagecreate",function(){
   
   
 //UPDATING BENEFITS PAGE WITH INFO FROM DATABASE
-//http://www.mocky.io/v2/5336fb3e695d396009574483 //TESTING URL THAT WORKS
+//WORKS FINE
 $.getJSON("http://softwarehuttest.x10.mx/public/user/listincome/", function (data) {
     //Loop for each element on the data
     $.each(data, function (elem) {
