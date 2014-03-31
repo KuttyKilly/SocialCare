@@ -92,7 +92,7 @@ $(document).ready( function() {
             amount: listDescription1,
             account: payment1
         }, function(data) {
-            alert("success " + data);
+            alert(data.status);
         }).fail(function() {
             alert("error");
         })
