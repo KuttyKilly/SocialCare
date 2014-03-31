@@ -45,7 +45,7 @@ $(document).ready( function() {
             async:true,
             cache:false,
             success: function (data) {
-                alert(data);
+                alert(data.status); 
             },
             error: function (xhr, status, error) {
                 alert(error);  
