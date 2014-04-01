@@ -53,8 +53,14 @@
                     </li>
                     <li>
                         <a href="#bills" data-transition="slidefade">
-                            <h1>Bills</h1>
+                            <h1>Future Bills</h1>
                             <img src="img/green-icon.png" alt="bills">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#unpaid" data-transition="slidefade">
+                            <h1>Unpaid Bills</h1>
+                            <img src="img/yellow-icon.png" alt="unpaid">
                         </a>
                     </li>
                     <li>
@@ -104,10 +110,10 @@
         </div>
         <!--End of benefits page-->
 
-        <!--Start of Bills Page-->
+        <!--Start of Future Bills Page-->
         <div data-role="page" id="bills" data-theme="e">
             <header data-role="header">
-            <h1>Bills</h1>    
+            <h1>Future Bills</h1>    
         </header>
         <article data-role="content">
             <div data-role="collapsible-set" id="billsList">
@@ -191,6 +197,22 @@
                 </footer>
         </div>
         <!--End of Earnings Page-->
+
+        <!--Start of Unpaid Bills Page-->
+        <div data-role="page" id="unpaidBills" data-theme="e">
+            <header data-role="header">
+            <h1>Unpaid Bills</h1>    
+        </header>
+        <article data-role="content">
+            <div data-role="collapsible-set" id="unpaidList">
+                <!--wil fill up with info from database-->
+            </div>
+        </article>
+        <footer data-role="footer" data-position="fixed">
+                <h1></h1>
+        </footer>
+        </div>
+        <!--End of Unpaid bills page-->
 
     </body>
 </html>

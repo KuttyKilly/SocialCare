@@ -1,8 +1,8 @@
+//Header set Access-Control-Allow-Origin "http://softwarehuttest.x10.mx/public/account/login/"    
 //LOGGING IN AND GOING TO HOME PAGE ON SUCCESS
 $(document).on("pageinit", "#loginForm", function () {
     $("#form1").on("submit", function (event) {
         event.preventDefault();
-
         $.ajax({
             type: "GET",
             url: "http://softwarehuttest.x10.mx/public/account/login/",
@@ -168,3 +168,23 @@ $.getJSON("http://softwarehuttest.x10.mx/public/user/listincome/", function (dat
 //back button for all pages less home
 $.mobile.page.prototype.options.addBackBtn = "true"; 
 $.mobile.page.prototype.options.backBtnText = "Go Back";
+
+//UNPAID - NOT TIDIED UP YET
+$.getJSON("http://softwarehuttest.x10.mx/public/user/listunpaidbills/",function(data){
+        //Loop for each element on the data
+        $.each(data,function(elem){
+            var wrap = $("<div/>").attr('data-role', 'collapsible');
+            //Create the h1 and the other elements appending them to bills List
+            $("<h1/>",{
+                text:data[elem].reference
+            }).appendTo(wrap);   
+            $("<p/>",{
+                text:"Account: "+ data[elem].account
+            }).appendTo(wrap);        
+            $("<p/>",{
+                text:"Amount: "+ data[elem].amount
+            }).appendTo(wrap);
+            wrap.appendTo('#unpaidList');    
+        })//end of for each loop
+        $( "#unpaidList" ).collapsibleset( "refresh" );
+    })//end of unpaid bills page update
