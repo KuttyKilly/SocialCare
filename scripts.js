@@ -191,7 +191,7 @@ $.getJSON("http://softwarehuttest.x10.mx/public/user/balance/",function(data){
             var wrap = $("<div/>").attr('data-role', 'collapsible');
             //Create the h1 and the other elements appending them to bills List
             $("<h1/>",{
-                text:data[elem].reference
+                text:"Something Title"
             }).appendTo(wrap);   
             $("<p/>",{
                 text:"Cash: "+ data[elem].cash
@@ -208,7 +208,7 @@ $.getJSON("http://softwarehuttest.x10.mx/public/user/balance/",function(data){
             wrap.appendTo('#budgetList');    
         })//end of for each loop
         $( "#budgetList" ).collapsibleset( "refresh" );
-    })//end of unpaid bills page update
+    })//end of unpaid budget page update
 
 
 //back button for all pages less home
