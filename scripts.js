@@ -191,7 +191,7 @@ $.getJSON("http://softwarehuttest.x10.mx/public/user/listunpaidbills/",function(
             var wrap = $("<div/>").attr('data-role', 'collapsible');
             //Create the h1 and the other elements appending them to bills List
             $("<h1/>",{
-                text:data[elem].reference
+                text:"Main Title"
             }).appendTo(wrap);   
             $("<p/>",{
                 text:"Account: "+ data[elem].account
