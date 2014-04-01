@@ -188,24 +188,27 @@ $.getJSON("http://softwarehuttest.x10.mx/public/user/listunpaidbills/",function(
 $.getJSON("http://softwarehuttest.x10.mx/public/user/balance/",function(data){
         //Loop for each element on the data
         $.each(data,function(elem){
-            var wrap = $("<div/>").attr('data-role', 'page');
+            var wrap = $("<div/>").attr('data-role', 'collapsible');
             //Create the h1 and the other elements appending them to bills List
-            $("<li/>",{
-                text:"Bank: "+ data[elem].bank
+            $("<h1/>",{
+                text:data[elem].reference
             }).appendTo(wrap);   
-            $("<li/>",{
+            $("<p/>",{
                 text:"Cash: "+ data[elem].cash
             }).appendTo(wrap);        
-            $("<li/>",{
+            $("<p/>",{
+                text:"Bank: "+ data[elem].bank
+            }).appendTo(wrap);
+            $("<p/>",{
                 text:"Daily Budget: "+ data[elem].daily_aim
             }).appendTo(wrap);
-            $("<li/>",{
-                text:"Today's Expenditure: "+ data[elem].spent_today
+            $("<p/>",{
+                text:"Today's Expense: "+ data[elem].spent_today
             }).appendTo(wrap);
             wrap.appendTo('#budgetList');    
         })//end of for each loop
         $( "#budgetList" ).collapsibleset( "refresh" );
-    })//end of budget page update
+    })//end of unpaid bills page update
 
 
 //back button for all pages less home
