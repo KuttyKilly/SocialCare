@@ -13,30 +13,7 @@
     </head>
     <body>
 
-        <!--Start of Log In Page-->
-        <div data-role="page" id="loginForm" data-theme="e">         
-            <header data-role="header">
-                 <h1>Log In</h1> 
-            </header>
-
-            <!--OLD FORM-->
-            <form id="form1" name="form1" method="GET" action="http://softwarehuttest.x10.mx/public/account/login/">
-                <label for="id">Username   </label>
-                <input type="text" name="id" id="id" />
-
-                <label for="password">Password   </label>
-                <input type="password" name="password" id="password" />
-                
-                <input type="hidden" name="rank" id="rank" value="1">
-
-                <input type="submit" name="submit" value="Login"/>    
-            </form>
-            
-            <footer data-role="footer" data-position="fixed">
-                <h1></h1>
-            </footer>
-        </div>
-        <!--End of Log In Page-->
+        
 
         <!--Start of Home Page-->
         <div data-role="page" id="home" data-theme="e">
@@ -76,16 +53,26 @@
                         </a>
                     </li>
                     <li>
+                        <a href="#budget" data-transition="slidefade">
+                            <h1>Budget</h1>
+                            <img src="img/red-icon.png" alt="Budget">
+                        </a>
+                    </li>
+                    <!--This was old manner of budget report where is was a pop. Removed cos of space constrain
+                    <li>
                         <a href="#budgetPopup" data-rel="popup" class="ui-content">
                             <h1>Budget</h1>
                             <img src="img/red-icon.png" alt="budget">
                         </a>
-                <!--Pop up details for total budget-->
+                    -->
+                    <!--Pop up details for total budget-->
+                    <!--
                         <div data-role="popup" id="budgetPopup" class="ui-content" data-transition="slide">               
                           <p>Total remaining budget</p>
                           <p><b>$100.00</b></p>
                         </div>
                     </li>
+                    -->
                 </ul>
             </article>
             <footer data-role="footer" data-position="fixed">
@@ -213,6 +200,36 @@
         </footer>
         </div>
         <!--End of Unpaid bills page-->
+
+        <!--Start of Budget Page-->
+        <div data-role="page" id="budget" data-theme="e">
+            <header data-role="header">
+            <h1>Budget</h1>    
+        </header>
+        <article data-role="content">
+            <ul data-role="listview" >
+                <li>
+                    <h1>Bank: </h1>
+                    <img src="img/cash.png" alt="benefits">
+                </li>
+                <li>
+                    <h1>Cash: </h1>
+                    <img src="img/cash.png" alt="bills">
+                </li>
+                <li>
+                    <h1>Daily Budget: </h1>
+                    <img src="img/cash.png" alt="unpaid">
+                </li>
+                <li>
+                    <h1>Today's Expenditure: </h1>
+                    <img src="img/cash.png" alt="expenditure">
+                </li>
+            </ul>
+        <footer data-role="footer" data-position="fixed">
+                <h1></h1>
+        </footer>
+        </div>
+        <!--End of budget page-->
 
     </body>
 </html>

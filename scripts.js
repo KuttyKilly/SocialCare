@@ -164,12 +164,7 @@ $.getJSON("http://softwarehuttest.x10.mx/public/user/listincome/", function (dat
     $( "#benefitsList" ).collapsibleset( "refresh" );
 });//end of benefits page update
 
-
-//back button for all pages less home
-$.mobile.page.prototype.options.addBackBtn = "true"; 
-$.mobile.page.prototype.options.backBtnText = "Go Back";
-
-//UNPAID - NOT TIDIED UP YET
+//UNPAID BILLS
 $.getJSON("http://softwarehuttest.x10.mx/public/user/listunpaidbills/",function(data){
         //Loop for each element on the data
         $.each(data,function(elem){
@@ -188,3 +183,32 @@ $.getJSON("http://softwarehuttest.x10.mx/public/user/listunpaidbills/",function(
         })//end of for each loop
         $( "#unpaidList" ).collapsibleset( "refresh" );
     })//end of unpaid bills page update
+////////////////////////////////////////////////////////////////////////////////
+//Budget
+$.getJSON("http://softwarehuttest.x10.mx/public/user/balance/",function(data){
+        //Loop for each element on the data
+        $.each(data,function(elem){
+            var wrap = $("<div/>").attr('data-role', 'page');
+            //Create the h1 and the other elements appending them to bills List
+            $("<li/>",{
+                text:"Bank: "+ data[elem].bank
+            }).appendTo(wrap);   
+            $("<li/>",{
+                text:"Cash: "+ data[elem].cash
+            }).appendTo(wrap);        
+            $("<li/>",{
+                text:"Daily Budget: "+ data[elem].daily_aim
+            }).appendTo(wrap);
+            $("<li/>",{
+                text:"Today's Expenditure: "+ data[elem].spent_today
+            }).appendTo(wrap);
+            wrap.appendTo('#budgetList');    
+        })//end of for each loop
+        $( "#budgetList" ).collapsibleset( "refresh" );
+    })//end of budget page update
+
+
+//back button for all pages less home
+$.mobile.page.prototype.options.addBackBtn = "true"; 
+$.mobile.page.prototype.options.backBtnText = "Go Back";
+
